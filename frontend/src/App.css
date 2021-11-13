@@ -14,14 +14,13 @@
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background-color: #14171a;
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: #f5f8fa;
 }
 
 .App-link {
@@ -32,7 +31,107 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
+}
+
+:root {
+  --primary-color: #1da1f2;
+}
+
+select {
+  margin: 16px;
+  padding: 8px;
+  font-size: 16px;
+  border-radius: 999px;
+  border-color: #aab8c2;
+  border-width: 2px;
+}
+
+li {
+  display: inline-block;
+  list-style-type: none;
+  background-color: #f5f8fa;
+  padding: 8px 16px;
+  margin: 8px;
+  border-radius: 999px;
+}
+
+li>a {
+  color: #29aae0;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+li:hover {
+  background-color: #29aae0;
+  color: white;
+  cursor: pointer;
+}
+
+li:hover>a {
+  color: #f5f8fa;
+}
+
+.tweet_volume {
+  font-size: 12px;
+  background-color: var(--primary-color);
+  color: #f5f8fa;
+  border-radius: 999px;
+  padding: 2px 4px;
+  margin-left: 4px;
+  font-weight: bold;
+}
+
+li:hover .tweet_volume {
+  color: var(--primary-color);
+  background-color: #f5f8fa;
+}
+
+.logo {
+  margin: 0 16px;
+  width: 44px;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+input[type=text] {
+  width: 15%;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  padding: 10px 10px 12px 20px;
+  transition: width 0.4s ease-in-out;
+}
+
+input[type=text]:focus {
+  width: 30%;
+}
+
+.mainForm {
+  padding: 1em;
+}
+
+.download-btn {
+  background-color: #29aae0;
+  border: none;
+  color: white;
+  font-weight: bold;
+  padding: 8px 16px;
+  border-radius: 999px;
+}
+
+.content {
+  max-width: 960px;
+  margin: auto;
 }
