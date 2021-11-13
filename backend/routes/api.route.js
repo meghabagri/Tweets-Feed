@@ -9,11 +9,11 @@ const client = new Twitter({
   access_token_secret: process.env.TWITTER_ACCESS_SECRET
 });
 
-router.get("/trends", async (req, res, next) => {
+router.get("/tweets/:name", async (req, res, next) => {
   try {
-    const id = req.query.username;
+    const username = req.params.name;
     const trends = await client.get("statuses/user_timeline", {
-      screen_name: "meghabagri12"
+      screen_name: username
     });
     res.send(trends);
   } catch (error) {
