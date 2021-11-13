@@ -1,7 +1,25 @@
-const router = require('express').Router();
+var express = require("express");
+var Twitter = require("twitter");
 
-router.get('/', async (req, res, next) => {
-  res.send({ message: 'Ok api is working 🚀' });
+var router = express.Router();
+const client = new Twitter({
+  consumer_key: process.env.TWITTER_CONSUMER_API_KEY,
+  consumer_secret: process.env.TWITTER_CONSUMER_API_SECRET,
+  access_token_key: process.env.TWITTER_ACCESS_TOKEN,
+  access_token_secret: process.env.TWITTER_ACCESS_SECRET
+});
+
+router.get("/trends", async (req, res, next) => {
+  try {
+    const id = req.query.username;
+    const trends = await client.get("statuses/user_timeline", {
+      screen_name: "meghabagri12"
+    });
+    res.send(trends);
+  } catch (error) {
+    console.log(error.message);
+    next(error);
+  }
 });
 
 module.exports = router;
