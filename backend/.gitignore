@@ -1,3 +1,1 @@
-# ignore this file deliberately since it contains private api keys
-.env 
 /node_modules
