@@ -13,7 +13,8 @@ router.get("/tweets/:name", async (req, res, next) => {
   try {
     const username = req.params.name;
     const trends = await client.get("statuses/user_timeline", {
-      screen_name: username
+      screen_name: username,
+      count: 10
     });
     res.send(trends);
   } catch (error) {
