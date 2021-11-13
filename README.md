@@ -1,4 +1,4 @@
-# tweets-feed
+### tweets-feed
 
 #### To run the application add your twitter api keys 🕵🏻‍♀️ in the ```.env``` file inside the backend folder:
 ```
@@ -13,6 +13,4 @@ TWITTER_ACCESS_SECRET=YOUR_ACCESS_SECRET
 * 🚀 start the backend server and the frontend application by running ```npm run dev``` command in the main folder.
 <br>
 
-
-https://user-images.githubusercontent.com/17153660/141660769-a5a74478-df5a-4d39-ba69-229b4f1481e3.mov
-
+![submission](https://user-images.githubusercontent.com/17153660/141660823-8688144a-f09f-4c2d-adfd-e414e8e37f2a.gif)
